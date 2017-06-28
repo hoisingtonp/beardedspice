@@ -29,6 +29,10 @@ BSStrategy = {
     }
   },
   toggle: function () {
+    if (document.querySelector('.StillListeningBody') !== null) {
+        document.querySelector('.StillListeningBody button[data-qa="keep_listening_button"]').click();
+        return;
+    }
     if (document.querySelector('.Tuner__Controls') !== null) {
       document.querySelector('.Tuner__Control__Play__Button').click();
     } else {
